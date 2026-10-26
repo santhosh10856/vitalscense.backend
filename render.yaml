@@ -1,0 +1,21 @@
+# render.yaml — VitalSense AI | Render.com Blueprint
+# ===================================================
+# This file enables one-click deployment on Render.com
+# Push to GitHub, then connect this repo to Render.com
+
+services:
+  - type: web
+    name: vitalsense-ai
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn preview_server:app --bind 0.0.0.0:$PORT --workers 4 --timeout 120
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: PYTHON_VERSION
+        value: "3.11.7"
+    healthCheckPath: /
+    autoDeploy: true

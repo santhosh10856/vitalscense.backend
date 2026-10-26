@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+*.pyc
+
+# Virtual environments
+venv/
+venv312/
+.env
+
+# Instance data (SQLite DB created at runtime on server)
+instance/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# APK build (too large for GitHub — build locally)
+apk-build/
+
+# Large dataset directories (too large for GitHub)
+brain_mri_dataset/
+kidney ct scan data sets/
+x ray datasets/
+
+# Large individual files
+*.apk
+file_000000006eec8206ba14d029a81dd6f5.png
+home page excat model.png
+
+# Module 3 virtual env and model store
+module3/venv312/
+module3/model_store/
+module3/uploads/
+
+# Uploads folder (runtime data)
+uploads/*.csv
+
+# Log files
+*.log
+module2_log.txt
